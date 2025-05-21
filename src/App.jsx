@@ -25,9 +25,7 @@ function App() {
           Edit <code>src/App.jsx</code> test
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to le00000000a000rn more
-      </p>
+      
     </>
   )
 }
