@@ -7,7 +7,7 @@ pipeline {
     /* --------------------------------------------------
        2) make Node.js available (Configure once in
           Manage Jenkins ▸ Global Tool Configuration)
-       -------------------------------------------------- */
+       ---------------------------------------------------------- */
     tools {
         nodejs 'NodeJS_LTS'   // ← the name you gave the tool
     }
