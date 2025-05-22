@@ -73,16 +73,15 @@ pipeline {
     }
 
     stage('Build') {
-      steps {
-        sh 'npm run build'
-      }
-      post {
-        success {
-          /* Archive the compiled static site so it’s available in Jenkins. */
-          archiveArtifacts artifacts: 'dist/**', fingerprint: true
-        }
-      }
-    }
+  steps {
+    // fail fast if anything goes wrong
+    sh '''
+      set -euxo pipefail
+      npm run build
+    '''
+  }
+}
+
 
     /* ——————————————————————————————————————————————————————————————————
        Optional deploy stage – only runs on main|master
